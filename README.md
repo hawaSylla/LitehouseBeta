@@ -11,7 +11,7 @@ This project is a starting point for LiteHouse, The Mentorship Application
 
 
 
-### Extra Stuff for Fluter Projects that is added by default:
+### Extra Stuff for Flutter Projects that is added by default:
 
 A few resources to get you started if this is your first Flutter project:
 

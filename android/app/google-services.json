@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "492816910220",
+    "project_id": "litehousebeta",
+    "storage_bucket": "litehousebeta.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:492816910220:android:89519a8b9ef74c7b6638a9",
+        "android_client_info": {
+          "package_name": "com.example.litehouse_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "492816910220-k66nmoakks3j55vg318graogsin3e0el.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBRs8tvcGf_CtDj9_7bODnmtpfQfRZwt24"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "492816910220-k66nmoakks3j55vg318graogsin3e0el.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

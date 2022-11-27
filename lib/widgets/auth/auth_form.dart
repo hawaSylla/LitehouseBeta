@@ -36,7 +36,16 @@ class _AuthFormState extends State<AuthForm> {
               SizedBox(
                 height: 12,
               ),
-              ElevatedButton(onPressed: (() {}), child: Text('Login'))
+              ElevatedButton(
+                onPressed: (() {}),
+                child: Text('Login'),
+              ),
+              TextButton(
+                  style: TextButton.styleFrom(
+                    foregroundColor: Theme.of(context).primaryColor,
+                  ),
+                  onPressed: (() {}),
+                  child: Text("Create New Account !"))
             ],
           )),
         )),

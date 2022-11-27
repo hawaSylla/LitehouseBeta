@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:litehouse_app/screens/auth_screen.dart';
 import 'package:litehouse_app/screens/chat_screen.dart';
 import 'package:firebase_core/firebase_core.dart';
 
@@ -21,7 +22,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'LiteHouseChat',
-      theme: ThemeData(
+      theme: ThemeData.from(
         // This is the theme of your application.
         //
         // Try running your application with "flutter run". You'll see the
@@ -31,9 +32,31 @@ class MyApp extends StatelessWidget {
         // or simply save your changes to "hot reload" in a Flutter IDE).
         // Notice that the counter didn't reset back to zero; the application
         // is not restarted.
-        primarySwatch: Colors.blue,
+        // primarySwatch: Colors.amber,
+        // backgroundColor: Colors.amber,
+        // accentColor: Colors.indigo,
+        // accentColorBrightness: Brightness.dark,
+        colorScheme: ColorScheme(
+          brightness: Brightness.light,
+          primary: Colors.amber,
+          onPrimary: Colors.white,
+          secondary: Colors.indigo,
+          onSecondary: Colors.white,
+          error: Colors.red,
+          onError: Colors.black,
+          background: Colors.amber,
+          onBackground: Colors.black,
+          surface: Colors.white,
+          onSurface: Colors.black26,
+        ),
+        // buttonTheme: ButtonTheme.of(context).copyWith(
+        //     buttonColor: Colors.indigo,
+        //     textTheme: ButtonTextTheme.primary,
+        //     shape: RoundedRectangleBorder(
+        //         borderRadius: BorderRadius.circular(20))),
+        // ColorScheme.fromSeed(seedColor: Colors.amber),
       ),
-      home: ChatScreen(),
+      home: AuthScreen(),
     );
   }
 }

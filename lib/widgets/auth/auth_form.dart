@@ -3,7 +3,9 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/material.dart';
 
 class AuthForm extends StatefulWidget {
-  AuthForm(this.submitFn);
+  AuthForm(this.submitFn, this.isLoading, {super.key});
+
+  final bool isLoading;
   final void Function(
       String email, String password, String userName, bool isLogin) submitFn;
   @override
@@ -12,7 +14,7 @@ class AuthForm extends StatefulWidget {
 
 class _AuthFormState extends State<AuthForm> {
   final _formKey = GlobalKey<FormState>();
-  var _isLogin = true;
+  bool _isLogin = true;
   var _userEmail = '';
   var _userName = '';
   var _userPassword = '';
@@ -87,10 +89,14 @@ class _AuthFormState extends State<AuthForm> {
                   const SizedBox(
                     height: 12,
                   ),
-                  ElevatedButton(
-                    onPressed: _trySubmit,
-                    child: Text(_isLogin ? 'Login' : "Sign-Up"),
-                  ),
+                  if (widget.isLoading) CircularProgressIndicator(),
+                  if (!widget.isLoading)
+                    ElevatedButton(
+                      onPressed: _trySubmit,
+                      child: Text(_isLogin ? 'Login' : "Sign-Up"),
+                    ),
+                  // if (widget.isLoading) CircularProgressIndicator(),
+                  // if (!widget.isLoading)
                   TextButton(
                       style: TextButton.styleFrom(
                         foregroundColor: Theme.of(context).colorScheme.primary,
